@@ -21,7 +21,7 @@ chain = prompt | llm | output_parser
 st.title("Chat with Harry Potter")
 
 if "messages" not in st.session_state:
-    st.session_state.messages = []
+    st.session_state.messages = [{"role": "assistant", "content": "openAI API key를 입력해주세요"}]
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
